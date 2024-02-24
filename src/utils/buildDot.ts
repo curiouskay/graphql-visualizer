@@ -147,6 +147,9 @@ export const buildDot = (function (_: any) {
         if (root.queryType) {
             q.push(root.queryType.name);
         }
+        if (root.mutationType) {
+            q.push(root.mutationType.name);
+        }
 
         const entities: { [key: string]: EntityType } = {};
         while (q.length) {
